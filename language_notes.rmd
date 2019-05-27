@@ -1,0 +1,85 @@
+---
+author: Matthew Delaney
+output: pdf_document
+title: 'Javascript Language Notes'
+---
+
+#Let vs. Var
+
+Let doesn't let us redeclare a variable, but var does:
+
+```js
+var myName = 'Chris';
+var myName = 'James'; //works
+
+let myName = 'Chris';
+let myName = 'James'; //doesn't work
+
+let myName = 'Chris';
+myName = 'James'; //works
+```
+
+#Var hoisting
+
+JavaScript's (js) compiler will parse through the code declaring every variable before beginning to run the code. This is called hoisting. It does not initialise the variables values however, that happens in a separate parse.
+
+For instance
+
+```js
+console.log(bar); //bar = undefined error, not bar does not exist error
+var bar = 111;
+console.log(bar); //111
+
+//is equivalent to
+
+var bar;
+console.log(bar);
+bar = 111;
+console.log(bar);
+```
+
+So it won't say that bar doesn't exist in the first line, it will say that it has no value assigned to it, that it is undefined (sidenote: undefined is an actual value that an actual variable can have). From this you can see that there is definitely a best practise of declaring/initialising your variables before they are used in js to avoid confusion.
+
+##Interesting interactions
+
+What happens in this code:
+
+```js
+let a;
+let b = a;
+a = 'A';
+```
+
+As the assignment occurs later, and these are not pointers, a = 'A', and b = undefined. As that's the value of a when b was initialised.
+
+In this next code, what is the scope of the variables initialised in the function?
+
+```js
+function a() {
+    var y = 2;
+
+    function b() {
+        x = 3;
+        y = 5;
+    }
+
+    console.log(x, y);
+}
+```
+
+Prints out 3, 5. Why? Because y in the scope of a(), and the scope of function b, and x is created as a global variable during the hoist. So you have to be careful of hoisting, as it can have many unintended side effects.
+
+You can also use let to declare a variable only available in this 'block'. As so:
+
+```js
+
+for (let myVar = 0; myVar < 10; myVar++) {
+    //myVar visible here
+}
+
+//myVar not visible here
+```
+
+myVar is only accessible to that for loop, and will be destroyed upon its completion.
+
+
