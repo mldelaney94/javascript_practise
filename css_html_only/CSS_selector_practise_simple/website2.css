@@ -1,0 +1,30 @@
+.frame {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #dc322f;
+    border-radius: 150px;
+}
+
+
+.floor {
+    position: absolute;
+    width: 400px;
+    height: 150px;
+    background: #6c71c4;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.sun {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 1.5em;
+    background: #eee8d5;
+    bottom: 300px;
+    left: 65px;
+}
+
+

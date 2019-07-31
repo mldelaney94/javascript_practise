@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Search</title>
+    <link rel=stylesheet type=text/css href=searchFromInput.css>
+</head>
+<body>
+
+    <label for="search">Search by contact name:</label>
+    <input id="search" type="text" autofocus>
+    <button>search</button>
+
+    <p></p>
+    <p></p>
+
+    <script>
+        const btn = document.querySelector('button'); 
+        const paraOne = document.querySelector('p');
+        const paraTwo = document.querySelectorAll('p')[1];
+        const input = document.querySelector('input');
+        const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+       
+        function search() { 
+            let searchName = input.value.toLowerCase();
+            for(let i = 0; i < contacts.length; i++) {
+                let split = contacts[i].split(':');
+                paraOne.textContent = 'You searched for: ' + input.value;
+                if (split[0].toLowerCase() === searchName) {
+                    paraTwo.textContent = split[0] + '\'s number is ' + split[1] + '.';
+                    break;
+                } else {
+                    paraTwo.textContent = 'Name not found';
+                }
+            }
+        };
+
+        btn.addEventListener('click', search);
+        input.addEventListener('keyup', function(event) {
+            if(event.keyCode === 13) {
+                btn.click();
+            } else {
+                //no-op
+            }
+        });
+    </script>
+</body>
+
+</html>

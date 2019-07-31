@@ -1,0 +1,9 @@
+custom {color: red;}
+
+.caution {font: Verdana; font-size: 1em; color: red;}
+
+custom h1 {font-size: 3em;}
+
+#header {width: 90%; background: black; font-size: 1.5em; color: white;}
+
+.superscript {vertical-align: super;}

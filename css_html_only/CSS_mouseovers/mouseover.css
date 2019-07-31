@@ -1,0 +1,36 @@
+:root {
+    --s-red-color: #dc322f;
+    --s-background-color: #002b36;
+    --s-tooltip-bg-color: #073642;
+    --s-text-color: #657b83;
+}
+
+.textMouseOver:hover {
+    color: var(--s-red-color);
+}
+
+body {
+    background-color: var(--s-background-color);
+    color: var(--s-text-color);
+    font-size: 40pt;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility:hidden;
+    width: 120px;
+    font-size: 24pt;
+
+    position: absolute;
+    z-index: 1;
+    background-color: var(--s-tooltip-bg-color);
+    text-align: center;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

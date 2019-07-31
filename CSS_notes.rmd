@@ -1,0 +1,34 @@
+---
+author: Matthew Delaney
+---
+
+/* */ is a comment in CSS
+
+#Linking a stylesheet
+
+\<link rel="stylesheet" type="text/css" href="\<address>">
+
+The link tag (placed in head) is used to link a document and an external 
+resource, not for hyperlinks, for which we use href
+
+It is possible to combine style sheets as so:
+
+\<LINK rel=stylesheet href="basics.css" title="contemp"\>
+\<LINK rel=stylesheet href="tables.css" title="contemp"\>
+
+#Using styles in HTML
+
+There are many ways. One way is to just create a name for the selector then
+wrap it around things (after linking the CSS file of course).
+
+i.e. <customSelector></customSelector>
+
+Or you can override the style element in the head sections
+
+<style type="text/css">
+
+custom {color: blue}
+
+</style>
+
+Or you can just write h1 {...} which will affect all h1 tags.

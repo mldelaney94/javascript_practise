@@ -1,0 +1,49 @@
+---
+title: HTML notes
+author: matthew delaney
+output: pdf_document
+---
+
+#Tags and their meanings
+
+"\<head\>" contains metadata, such as the pages title bar name, scripts,
+links and style
+
+"\<html\>" just designates a html document, as such is needed in all
+html documents
+
+"\<body\>" contains just about everything else in terms of actual content
+on the page
+
+#Blocklevel and inline elements
+
+Most HTML elements fall into one of two groups: block-level or inline.
+
+It is important to note that block-level elements may contain inline
+elements but not vice-versa. 
+
+These ideas are now somewhat historical, with new HTML5 elements
+not being labelled as block or inline level.
+
+A block-level elements contains information for an entire 'block' of text
+i.e. a paragraph, a heading, text attached to a photograph. Basically
+elements that stand on their own.
+
+#Presentational vs Logical
+
+Elements like \<b\> are presentational, that is, they create visual affects
+on the enclosed text. However they are not very good outside of their
+direct use case, i.e. making text look bold. For instance in a audio-only
+browser for the blind, \<b\> means nothing. Instead we would use a 
+logical tag like \<strong\>, which is a logical element that would be
+decoded by the browser.
+
+Another instance is larger fonts. Well what about when your browser
+displays all font the same size for some reason. Suddenly a \<h1\> tag
+would've been useful, in order to allow for some logical structure.
+
+Basically this is the difference between presentational and logical tags.
+Without logical structure, accessibility becomes difficult.
+
+
+

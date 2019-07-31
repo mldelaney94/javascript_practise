@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Squares!</title>
+        <link rel=stylesheet type=text/css href=squares.css>
+    </head>
+    <body>
+        <label for=enter class=fontStyle>Enter number:</label>
+        <input id=enter type=text autofocus>
+        <button>Generate integer squares</button>
+
+        <p class=fontStyle></p>
+        <p class=fontStyle></p>
+
+        <script>
+            const paraOne = document.querySelector('p');
+            const paraTwo = document.querySelectorAll('p')[1];
+            const btn = document.querySelector('button');
+            const input = document.querySelector('input');
+
+            function generateSquares() {
+                paraOne.textContent = 'You entered: ' + input.value;
+                let i = 1;
+                paraTwo.textContent = '';
+                for (let i = 1; i <= input.value; i++) {
+                    let sqRoot = Math.sqrt(i);
+                    if (sqRoot !== Math.floor(sqRoot)) {
+                        continue;
+                    }
+                    paraTwo.textContent += i + ' ';
+                }
+            };
+
+            btn.addEventListener ('click', generateSquares);
+            input.addEventListener('keyup', function(event) {
+                if (event.keyCode === 13) {
+                    btn.click();
+                }
+            });
+
+        </script>
+    </body>
+</html>
