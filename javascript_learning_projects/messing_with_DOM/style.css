@@ -5,3 +5,40 @@
     padding: 15px 15px;
     width: 50%;
 }
+
+.spoiler {
+    background-color: black;
+    color: black;
+    cursor: pointer;
+}
+
+.normal {
+    background-color:white;
+    color:black;
+    cursor:default;
+}
+
+.calculatorColumn {
+    color: #839496;
+    display: block;
+}
+
+.calculatorButton {
+    background-color: #002B36;
+    color: #839496;
+    text-align: center;
+    display: inline-block;
+
+    width: 46px;
+    height: 46px;
+}
+
+.calculatorResultScreen {
+    background-color: #073642;
+    color: #839496;
+    font-size: 19px;
+    display: block;
+    text-align: right;
+
+    width: 150px;
+}

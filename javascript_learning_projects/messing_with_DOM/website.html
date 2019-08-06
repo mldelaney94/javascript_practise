@@ -11,12 +11,52 @@
     <button id="date_button" onclick="displayDate(); changeColor(); changePStyle()">This button will display the date when you click</button>
     <p id="date_p"></p>
 
-    <p id="css_js_p">This is the epitome of class</p>
+    <p id="css_p">This is the epitome of class</p>
 
+    <hr>
+    <textarea id = "textArea_one" rows=4 cols=80>1</textarea> <!-- this is a HTML5 feature-->
+    <br>
+    <textarea id = "textArea_two" rows=4 cols=80>2</textarea> <!-- this is a HTML5 feature-->
+    <br>
+    <textarea id = "textArea_three" rows=4 cols=80>3</textarea> <!-- this is a HTML5 feature-->
+    <br>
+    <button id="textArea_button" onclick="shiftTextAreaContentsDown();">This button will shift the text box's contents down one text box</button>
+    <hr>
 
-    <form>
+    <p>The text below is blacked out, as in spoiler content on Reddit</p>
 
+    <p><span id="spoiler" class="spoiler" onclick="unSpoil();">Surprise! It is now fully viewable!</span></p>
 
-    </form>
+    <hr>
+
+    <p>This is a calculator:</p>
+    <div class=calculatorResultScreen>
+        <p id="calculatorResultString">0</p>
+    </div>
+    <div class=calculatorColumn>
+        <button class=calculatorButton onclick="calculatorButtonPress('1')">1</button>
+        <button class=calculatorButton onclick="calculatorButtonPress('2')">2</button>
+        <button class=calculatorButton onclick="calculatorButtonPress('3')">3</button>
+        <button class=calculatorButton onclick="calculatorButtonPress('+')">+</button>
+    </div>
+    <div class=calculatorColumn>
+        <button class=calculatorButton onclick="calculatorButtonPress('4')">4</button>
+        <button class=calculatorButton onclick="calculatorButtonPress('5')">5</button>
+        <button class=calculatorButton onclick="calculatorButtonPress('6')">6</button>
+        <button class=calculatorButton onclick="calculatorButtonPress('-')">-</button>
+    </div>
+    <div class=calculatorColumn>
+        <button class=calculatorButton onclick="calculatorButtonPress('7')">7</button>
+        <button class=calculatorButton onclick="calculatorButtonPress('8')">8</button>
+        <button class=calculatorButton onclick="calculatorButtonPress('9')">9</button>
+        <button class=calculatorButton onclick="calculatorButtonPress('x')">x</button>
+    </div>
+    <div class=calculatorColumn>
+        <button class=calculatorButton onclick="calculatorButtonPress('0')">0</button>
+        <button class=calculatorButton style="width: 96px;" onclick="calculate()">=</button>
+        <button class=calculatorButton onclick="calculatorButtonPress('/')">/</button>
+    </div>
+
+    <p id="buttonString_p">NULL</p>
 </body>
 </html>
