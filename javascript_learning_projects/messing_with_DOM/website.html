@@ -29,34 +29,38 @@
 
     <hr>
 
-    <p>This is a calculator:</p>
+    <p style="font-size: 36px;">This is a calculator (bugged to only work from left to right):</p>
     <div class=calculatorResultScreen>
-        <p id="calculatorResultString">0</p>
+        <p id="calculationResult">0</p>
     </div>
     <div class=calculatorColumn>
-        <button class=calculatorButton onclick="calculatorButtonPress('1')">1</button>
-        <button class=calculatorButton onclick="calculatorButtonPress('2')">2</button>
-        <button class=calculatorButton onclick="calculatorButtonPress('3')">3</button>
-        <button class=calculatorButton onclick="calculatorButtonPress('+')">+</button>
+        <button class=calculatorButton onclick="addToCalculation('1')">1</button>
+        <button class=calculatorButton onclick="addToCalculation('2')">2</button>
+        <button class=calculatorButton onclick="addToCalculation('3')">3</button>
+        <button class=calculatorButton onclick="addToCalculation('+')">+</button>
     </div>
     <div class=calculatorColumn>
-        <button class=calculatorButton onclick="calculatorButtonPress('4')">4</button>
-        <button class=calculatorButton onclick="calculatorButtonPress('5')">5</button>
-        <button class=calculatorButton onclick="calculatorButtonPress('6')">6</button>
-        <button class=calculatorButton onclick="calculatorButtonPress('-')">-</button>
+        <button class=calculatorButton onclick="addToCalculation('4')">4</button>
+        <button class=calculatorButton onclick="addToCalculation('5')">5</button>
+        <button class=calculatorButton onclick="addToCalculation('6')">6</button>
+        <button class=calculatorButton onclick="addToCalculation('-')">-</button>
     </div>
     <div class=calculatorColumn>
-        <button class=calculatorButton onclick="calculatorButtonPress('7')">7</button>
-        <button class=calculatorButton onclick="calculatorButtonPress('8')">8</button>
-        <button class=calculatorButton onclick="calculatorButtonPress('9')">9</button>
-        <button class=calculatorButton onclick="calculatorButtonPress('x')">x</button>
+        <button class=calculatorButton onclick="addToCalculation('7')">7</button>
+        <button class=calculatorButton onclick="addToCalculation('8')">8</button>
+        <button class=calculatorButton onclick="addToCalculation('9')">9</button>
+        <button class=calculatorButton onclick="addToCalculation('*')">*</button>
     </div>
     <div class=calculatorColumn>
-        <button class=calculatorButton onclick="calculatorButtonPress('0')">0</button>
-        <button class=calculatorButton style="width: 96px;" onclick="calculate()">=</button>
-        <button class=calculatorButton onclick="calculatorButtonPress('/')">/</button>
+        <button class=calculatorButton onclick="addToCalculation('0')">0</button>
+        <button class=calculatorButton style="width: 176px;" onclick="calculate()">=</button>
+        <button class=calculatorButton onclick="addToCalculation('/')">/</button>
     </div>
 
-    <p id="buttonString_p">NULL</p>
+    <p id="calculationDisplay">NULL</p>
+    <hr>
+
+
+
 </body>
 </html>

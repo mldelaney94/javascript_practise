@@ -28,17 +28,19 @@
     color: #839496;
     text-align: center;
     display: inline-block;
+    font-size: 36px;
 
-    width: 46px;
-    height: 46px;
+    width: 86px;
+    height: 86px;
 }
 
+/* Colours are from Solarized colourscheme */
 .calculatorResultScreen {
     background-color: #073642;
     color: #839496;
-    font-size: 19px;
+    font-size: 34px;
     display: block;
     text-align: right;
 
-    width: 150px;
+    width: 265px;
 }

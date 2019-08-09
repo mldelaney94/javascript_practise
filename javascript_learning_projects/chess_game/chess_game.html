@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Chess</title>
+    <link rel="stylesheet" type="text/css" href="chess_game.css"/>
+    <script src="chess_game_scripts.js"></script>
+</head>
+
+<body>
+    <h1>Chess Game</h1>
+    <div id="entireBoard">
+        <div class="coord"></div>
+        <div class="coord">A</div>
+        <div class="coord">B</div>
+        <div class="coord">C</div>
+        <div class="coord">D</div>
+        <div class="coord">E</div>
+        <div class="coord">F</div>
+        <div class="coord">G</div>
+        <div class="coord">H</div>
+        <div class="coord"></div>
+        <div class="coord left">8</div>
+        <div class="coord rght">8</div>
+        <div class="coord left">7</div>
+        <div class="coord rght">7</div>
+        <div class="coord left">6</div>
+        <div class="coord rght">6</div>
+        <div class="coord left">5</div>
+        <div class="coord rght">5</div>
+        <div class="coord left">4</div>
+        <div class="coord rght">4</div>
+        <div class="coord left">3</div>
+        <div class="coord rght">3</div>
+        <div class="coord left">2</div>
+        <div class="coord rght">2</div>
+        <div class="coord left">1</div>
+        <div class="coord rght">1</div>
+        <div class="coord left"></div>
+        <div class="coord">A</div>
+        <div class="coord">B</div>
+        <div class="coord">C</div>
+        <div class="coord">D</div>
+        <div class="coord">E</div>
+        <div class="coord">F</div>
+        <div class="coord">G</div>
+        <div class="coord">H</div>
+        <div class="coord"></div>
+        <div id="board">
+            <div id="row-8">
+                <div id="row-8-col-a" class="white"></div>
+                <div id="row-8-col-b" class="black"></div>
+                <div id="row-8-col-c" class="white"></div>
+                <div id="row-8-col-d" class="black"></div>
+                <div id="row-8-col-e" class="white"></div>
+                <div id="row-8-col-f" class="black"></div>
+                <div id="row-8-col-g" class="white"></div>
+                <div id="row-8-col-h" class="black"></div>
+            </div>
+            <div id="row-7">
+                <div id="row-7-col-a" class="black"></div>
+                <div id="row-7-col-b" class="white"></div>
+                <div id="row-7-col-c" class="black"></div>
+                <div id="row-7-col-d" class="white"></div>
+                <div id="row-7-col-e" class="black"></div>
+                <div id="row-7-col-f" class="white"></div>
+                <div id="row-7-col-g" class="black"></div>
+                <div id="row-7-col-h" class="white"></div>
+            </div>
+            <div id="row-6">
+                <div id="row-6-col-a" class="white"></div>
+                <div id="row-6-col-b" class="black"></div>
+                <div id="row-6-col-c" class="white"></div>
+                <div id="row-6-col-d" class="black"></div>
+                <div id="row-6-col-e" class="white"></div>
+                <div id="row-6-col-f" class="black"></div>
+                <div id="row-6-col-g" class="white"></div>
+                <div id="row-6-col-h" class="black"></div>
+            </div>
+            <div id="row-5">
+                <div id="row-5-col-a" class="black"></div>
+                <div id="row-5-col-b" class="white"></div>
+                <div id="row-5-col-c" class="black"></div>
+                <div id="row-5-col-d" class="white"></div>
+                <div id="row-5-col-e" class="black"></div>
+                <div id="row-5-col-f" class="white"></div>
+                <div id="row-5-col-g" class="black"></div>
+                <div id="row-5-col-h" class="white"></div>
+            </div>
+            <div id="row-4">
+                <div id="row-4-col-a" class="white"></div>
+                <div id="row-4-col-b" class="black"></div>
+                <div id="row-4-col-c" class="white"></div>
+                <div id="row-4-col-d" class="black"></div>
+                <div id="row-4-col-e" class="white"></div>
+                <div id="row-4-col-f" class="black"></div>
+                <div id="row-4-col-g" class="white"></div>
+                <div id="row-4-col-h" class="black"></div>
+            </div>
+            <div id="row-3">
+                <div id="row-3-col-a" class="black"></div>
+                <div id="row-3-col-b" class="white"></div>
+                <div id="row-3-col-c" class="black"></div>
+                <div id="row-3-col-d" class="white"></div>
+                <div id="row-3-col-e" class="black"></div>
+                <div id="row-3-col-f" class="white"></div>
+                <div id="row-3-col-g" class="black"></div>
+                <div id="row-3-col-h" class="white"></div>
+            </div>
+            <div id="row-2">
+                <div id="row-2-col-a" class="white"></div>
+                <div id="row-2-col-b" class="black"></div>
+                <div id="row-2-col-c" class="white"></div>
+                <div id="row-2-col-d" class="black"></div>
+                <div id="row-2-col-e" class="white"></div>
+                <div id="row-2-col-f" class="black"></div>
+                <div id="row-2-col-g" class="white"></div>
+                <div id="row-2-col-h" class="black"></div>
+            </div>
+            <div id="row-1">
+                <div id="row-1-col-a" class="black"></div>
+                <div id="row-1-col-b" class="white"></div>
+                <div id="row-1-col-c" class="black"></div>
+                <div id="row-1-col-d" class="white"></div>
+                <div id="row-1-col-e" class="black"></div>
+                <div id="row-1-col-f" class="white"></div>
+                <div id="row-1-col-g" class="black"></div>
+                <div id="row-1-col-h" class="white"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
