@@ -15,7 +15,6 @@
     --blue:     #268bd2; 
     --cyan:     #2aa198; 
     --green:    #859900; 
-    --piece-size: 80px;
 }
 
 body {
@@ -32,7 +31,6 @@ h1 {
     height: 800px;
     margin: 20px;
     background-color: var(--base03);
-    color: var(--base0);
 }
 
 #board {
@@ -43,32 +41,35 @@ h1 {
     margin: 80px;
 }
 
-div.coord {
+.coord {
     width: 80px;
     height: 80px;
     text-align: center;
     line-height: 80px;
     float: left;
+    color: var(--base0);
 }
 
-div.rght {
+.rght {
     float: right;
 }
 
-div.left {
+.left {
     clear: both;
+}
+
+.square {
+    font-size: 50px;
+    text-align: center;
+    width:80px;
+    height: 80px;
+    float: left;
 }
 
 .white {
     background-color: var(--base3);
-    width:80px;
-    height: 80px;
-    float: left;
 }
 
 .black {
     background-color: var(--base02);
-    width:80px;
-    height: 80px;
-    float: left;
 }
