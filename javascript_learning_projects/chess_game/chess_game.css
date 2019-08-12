@@ -31,6 +31,7 @@ h1 {
     height: 800px;
     margin: 20px;
     background-color: var(--base03);
+    float:left;
 }
 
 #board {
@@ -72,4 +73,9 @@ h1 {
 
 .black {
     background-color: var(--base02);
+}
+
+textarea {
+    float: left;
+    font-size: 28px;
 }

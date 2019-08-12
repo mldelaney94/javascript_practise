@@ -197,12 +197,14 @@ function clickHandler(piece, pieceLoc) {
     //if holding a piece, then we want to place it
     //if not, then we want to pick one up, which we cannot do if piece == ""
     if (holdingPiece) {
-        //here we want to do all the complicated shenanigans
-        document.getElementById(pieceLoc).innerText = heldPiece;
+        let takenPiece = document.getElementById(pieceLoc).innerText;
+        printPiecePlacement(heldPiece, pieceLoc);
         holdingPiece = false;
+        document.getElementById(pieceLoc).innerText = heldPiece;
     } else if (piece == "") {
         return;
     } else if (holdingPiece == false) {
+        document.getElementById(pieceLoc).style = "cursor: auto";
         document.getElementById(pieceLoc).innerText = "";
         heldPiece = piece;
         holdingPiece = true;
@@ -215,4 +217,9 @@ function hoverHandler (piece, pieceLoc) {
     } else {
         document.getElementById(pieceLoc).style = "cursor: auto";
     }
+}
+
+function printPiecePlacement (piece, pieceLoc) {
+    let pieceLocInfo = pieceLoc.split("-");
+    document.getElementById("gameRecord").innerHTML += heldPiece + pieceLocInfo[3] + pieceLocInfo[1] + "\n";
 }
